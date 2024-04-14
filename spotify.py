@@ -13,9 +13,7 @@ def setup_driver():
     chrome_options.add_argument("--disable-gpu")
     chrome_options.add_argument("--no-sandbox")
     chrome_options.add_argument("--disable-dev-shm-usage")
-    chrome_options.binary_location = os.environ.get("GOOGLE_CHROME_BIN")
-    webdriver_service = Service(os.environ.get("CHROMEDRIVER_PATH"))
-    return webdriver.Chrome(options=chrome_options, service=webdriver_service, )
+    return webdriver.Chrome(options=chrome_options)
 
 def get_download_url(driver, track_url):
     driver.get("https://spotifymate.com/")
