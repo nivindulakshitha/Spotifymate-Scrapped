@@ -41,7 +41,7 @@ def get_download_url(driver, track_url):
 
 def main(event, contect):
     print("Starting...")
-    track_url = "https://open.spotify.com/track/4j9F9K3pSOzMSqyCk6LBXq?si=7652a765f1904691"
+    track_url = "TRACK_URL"
     driver = setup_driver()
     download_url = get_download_url(driver, track_url)
     if download_url:
